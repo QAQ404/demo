@@ -5,6 +5,15 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/123
+    url: jdbc:mysql://localhost:3306/big_event
     username: root
     password: 123456
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.example.demo.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+myuser:
+  id: "114514"
+  name: "zhangsan"

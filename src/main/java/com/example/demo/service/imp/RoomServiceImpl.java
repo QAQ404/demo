@@ -1,6 +1,6 @@
 package com.example.demo.service.imp;
 
-import com.example.demo.mapper.RoomMapper;
+import com.example.demo.dao.RoomMapper;
 import com.example.demo.pojo.Room;
 import com.example.demo.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
