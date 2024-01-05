@@ -18,4 +18,6 @@ public interface UserMapper {
     void update(User user);
 
     void updateAvatar(String avatarUrl,int id);
+
+    void updatePwd(String md5DigestAsHex, int id);
 }
