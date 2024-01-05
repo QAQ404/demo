@@ -20,4 +20,18 @@
             and create_user=#{id}
         </where>
     </select>
+
+    <select id="detail" resultType="Article">
+        select * from big_event.article where id=#{id}
+    </select>
+
+    <delete id="delete">
+        delete from big_event.article where id=#{id}
+    </delete>
+
+    <update id="update">
+        update big_event.article set title=#{title},content=#{content},cover_img=#{coverImg},
+                                     state=#{state},update_time=#{updateTime},category_id=#{categoryId}
+        where id=#{id}
+    </update>
 </mapper>

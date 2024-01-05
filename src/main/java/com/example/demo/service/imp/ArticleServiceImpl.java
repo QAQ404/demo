@@ -50,4 +50,19 @@ public class ArticleServiceImpl implements ArticleService {
 
         return pageBean;
     }
+
+    @Override
+    public Article detail(int id) {
+        return articleMapper.detail(id);
+    }
+
+    @Override
+    public void delete(int id) {
+        articleMapper.delete(id);
+    }
+
+    @Override
+    public void update(Article article) {
+        articleMapper.update(article);
+    }
 }
