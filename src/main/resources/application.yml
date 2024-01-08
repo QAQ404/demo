@@ -18,6 +18,3 @@ mybatis:
   type-aliases-package: com.example.demo.pojo
   configuration:
     map-underscore-to-camel-case: true
-myuser:
-  id: "114514"
-  name: "zhangsan"

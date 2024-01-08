@@ -22,7 +22,8 @@ public class FileUploadController {
         String filename = UUID.randomUUID().toString() +
                 originalFilename.substring(originalFilename.lastIndexOf("."));
         //保存到本地
-        //file.transferTo(new File("C:\\Users\\heqia\\Desktop\\file\\"+filename));
+//        String url = "C:\\Users\\heqia\\Desktop\\file\\"+filename;
+//        file.transferTo(new File("C:\\Users\\heqia\\Desktop\\file\\"+filename));
         String url = AliOssUtil.uploadFile(filename,file.getInputStream());
         return Result.success(url);
     }

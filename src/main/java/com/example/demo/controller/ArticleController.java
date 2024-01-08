@@ -35,7 +35,6 @@ public class ArticleController {
                                     ,@RequestParam(required = false) String categoryId
                                     ,@RequestParam(required = false) String state){
         PageBean<Article> pageBean = articleService.list(pageNum,pageSize,categoryId,state);
-
         return Result.success(pageBean);
     }
 
