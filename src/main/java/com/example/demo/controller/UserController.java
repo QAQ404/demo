@@ -121,5 +121,13 @@ public class UserController {
 
         return Result.success("pwd change yes");
     }
+
+    @GetMapping("/exit")
+    public Result exit(@RequestHeader("Authorization") String token){
+        ValueOperations<String, String> operations = stringRedisTemplate.opsForValue();
+        operations.getOperations().delete(token);
+        ThreadLocalUtil.remove();
+        return Result.success("退出成功");
+    }
 }
 

@@ -16,7 +16,7 @@ import java.util.UUID;
 public class FileUploadController {
 
 
-    @PostMapping("/upload")
+    @PostMapping("/upload")//文件大小要小于1M
     public Result<String> upload(MultipartFile file) throws Exception {
         String originalFilename= file.getOriginalFilename();
         String filename = UUID.randomUUID().toString() +
